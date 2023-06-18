@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "B": {
+      "item": "xtech:barrel"
+    },
+    "R": {
+      "item": "xtech:receiver"
+    },
+    "T": {
+      "item": "xtech:trigger"
+    }
+  },
+  "pattern": [
+    "   ",
+    "BR ",
+    " T "
+  ],
+  "result": {
+    "item": "xtech:glock"
+  },
+  "show_notification": true
+}

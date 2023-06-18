@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "B": {
+      "item": "xtech:barrel"
+    },
+    "N": {
+      "item": "minecraft:netherite_ingot"
+    },
+    "P": {
+      "tag": "minecraft:planks"
+    },
+    "R": {
+      "item": "xtech:receiver"
+    },
+    "T": {
+      "item": "xtech:trigger"
+    }
+  },
+  "pattern": [
+    " N ",
+    "BRP",
+    " T "
+  ],
+  "result": {
+    "item": "xtech:rifle"
+  },
+  "show_notification": true
+}

@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:gunpowder"
+    },
+    {
+      "item": "minecraft:gunpowder"
+    },
+    {
+      "item": "xtech:bronze"
+    },
+    {
+      "item": "xtech:bronze"
+    }
+  ],
+  "result": {
+    "count": 2,
+    "item": "xtech:bullet_sixteenmm"
+  }
+}

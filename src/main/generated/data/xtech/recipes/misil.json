@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "G": {
+      "item": "minecraft:gunpowder"
+    },
+    "T": {
+      "item": "minecraft:tnt"
+    }
+  },
+  "pattern": [
+    "TTT",
+    "TGT",
+    "TTT"
+  ],
+  "result": {
+    "count": 2,
+    "item": "xtech:misil"
+  },
+  "show_notification": true
+}

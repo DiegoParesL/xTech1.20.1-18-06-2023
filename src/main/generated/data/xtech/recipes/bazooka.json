@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "B": {
+      "item": "xtech:barrel"
+    },
+    "N": {
+      "item": "minecraft:netherite_ingot"
+    },
+    "S": {
+      "item": "minecraft:netherite_scrap"
+    },
+    "T": {
+      "item": "xtech:trigger"
+    }
+  },
+  "pattern": [
+    "NNN",
+    "BSS",
+    "NTN"
+  ],
+  "result": {
+    "item": "xtech:bazooka"
+  },
+  "show_notification": true
+}

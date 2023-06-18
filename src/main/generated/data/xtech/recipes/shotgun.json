@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "B": {
+      "item": "xtech:barrel"
+    },
+    "P": {
+      "tag": "minecraft:planks"
+    },
+    "R": {
+      "item": "xtech:receiver"
+    },
+    "T": {
+      "item": "xtech:trigger"
+    }
+  },
+  "pattern": [
+    "B  ",
+    "BRP",
+    " T "
+  ],
+  "result": {
+    "item": "xtech:shotgun"
+  },
+  "show_notification": true
+}

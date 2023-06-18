@@ -1,0 +1,47 @@
+{
+  "item.xtech.bronze": "Bronze",
+  "item.xtech.raw_tin": "Raw Tin",
+  "item.xtech.tin": "Tin",
+  "block.xtech.tin_ore": "Tin ore",
+  "block.xtech.gold_pillar": "Gold Pillar",
+
+  "item.xtech.bronze_thiswhat": "Bronze ThisWhat",
+  "item.xtech.bronze_sword": "Bronze Sword",
+
+
+  "item.xtech.bronze_boots": "Bronze Boots",
+  "item.xtech.bronze_chestplate": "Bronze Chestplate",
+  "item.xtech.bronze_helmet": "Bronze Helmet",
+  "item.xtech.bronze_leggings": "Bronze Leggings",
+
+  "item.xtech.shotgun": "Shotgun",
+  "item.xtech.barrel": "Barrel",
+  "item.xtech.receiver": "Receiver",
+  "item.xtech.trigger": "Trigger",
+
+  "item.xtech.glock": "Glock",
+
+  "item.xtech.rifle": "Rifle",
+
+  "item.xtech.bazooka": "Bazooka",
+
+  "item.xtech.tp_staff": "TP Staff",
+
+  "item.xtech.kunai": "KunaiSS",
+
+  "item.xtech.bullet_sixteenmm": "Bullet 16mm",
+  "item.xtech.ninemm": "Bullet 9mm",
+  "item.xtech.shotgun_shell": "Shotgun Shell",
+  "item.xtech.misil": "Misil",
+
+  "entity.xtech.bullet": "Bullet",
+  "entity.xtech.ninemm": "Bullet",
+  "entity.xtech.shell": "Bullet",
+  "entity.xtech.misil": "Misil",
+
+  "effect.xtech.zoom": "Zoom",
+
+  "death.attack.bullet_shoot": "%1$s was shot by %2$s",
+  "death.attack.bullet_shoot.player": "%1$s was killed by %2$s shooting a %3$s",
+  "itemgroup.bronze": "xTech Tab"
+}
