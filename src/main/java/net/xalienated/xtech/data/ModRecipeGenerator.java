@@ -125,6 +125,42 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .criterion(FabricRecipeProvider.hasItem(Items.ENDER_PEARL),FabricRecipeProvider.conditionsFromItem(Items.ENDER_PEARL))
                 .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(ModItems.TP_STAFF)));
 
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.BRONZE_BOOTS)
+                .pattern("   ")
+                .pattern("B B")
+                .pattern("B B")
+                .input('B', ModItems.BRONZE)
+                .criterion(FabricRecipeProvider.hasItem(ModItems.BRONZE),FabricRecipeProvider.conditionsFromItem(ModItems.BRONZE))
+                .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(ModItems.BRONZE_BOOTS)));
+
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.BRONZE_LEGGINGS)
+                .pattern("BBB")
+                .pattern("B B")
+                .pattern("B B")
+                .input('B', ModItems.BRONZE)
+                .criterion(FabricRecipeProvider.hasItem(ModItems.BRONZE),FabricRecipeProvider.conditionsFromItem(ModItems.BRONZE))
+                .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(ModItems.BRONZE_LEGGINGS)));
+
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.BRONZE_HELMET)
+                .pattern("   ")
+                .pattern("BBB")
+                .pattern("B B")
+                .input('B', ModItems.BRONZE)
+                .criterion(FabricRecipeProvider.hasItem(ModItems.BRONZE),FabricRecipeProvider.conditionsFromItem(ModItems.BRONZE))
+                .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(ModItems.BRONZE_HELMET)));
+
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.BRONZE_CHESTPLATE)
+                .pattern("B B")
+                .pattern("BBB")
+                .pattern("BBB")
+                .input('B', ModItems.BRONZE)
+                .criterion(FabricRecipeProvider.hasItem(ModItems.BRONZE),FabricRecipeProvider.conditionsFromItem(ModItems.BRONZE))
+                .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(ModItems.BRONZE_CHESTPLATE)));
+
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.NINE_MM,2)
                 .input(Items.GUNPOWDER)
                 .input(Items.GUNPOWDER)
