@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "B": {
+      "item": "xtech:bronze"
+    }
+  },
+  "pattern": [
+    "   ",
+    "B B",
+    "B B"
+  ],
+  "result": {
+    "item": "xtech:bronze_boots"
+  },
+  "show_notification": true
+}
