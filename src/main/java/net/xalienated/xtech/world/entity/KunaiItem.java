@@ -6,7 +6,6 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.world.World;
-import net.xalienated.xtech.item.ModItems;
 
 public class KunaiItem extends Item {
 
@@ -19,7 +18,7 @@ public class KunaiItem extends Item {
         ItemStack itemStack = user.getStackInHand(hand);
         KunaiEntity kunai = new KunaiEntity(world,user);
 
-        kunai.setVelocity(user,user.getPitch(), user.getYaw(),0.0F,3.5f,0.2f);
+        kunai.setVelocity(user,user.getPitch(), user.getYaw(),0.0F,3.6f,0.2f);
         if(!world.isClient){
             itemStack.decrement(1);
             world.spawnEntity(kunai);
