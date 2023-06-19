@@ -56,7 +56,7 @@ public class KunaiEntity extends ThrownItemEntity {
         Entity entity = entityHitResult.getEntity();
         World world = getWorld();
         if(player instanceof PlayerEntity playerEntity) {
-            entity.damage(world.getDamageSources().create(BULLET_SHOOT, playerEntity), 25f);
+            entity.damage(world.getDamageSources().create(BULLET_SHOOT, playerEntity), 4f);
         }
     }
     private int count =0;
@@ -77,7 +77,7 @@ public class KunaiEntity extends ThrownItemEntity {
                 count++;
 
             }else{
-                world.createExplosion(this,this.getX()+vec3d.x,this.getY()+vec3d.y,this.getZ()+vec3d.z,6f, World.ExplosionSourceType.TNT);
+                world.createExplosion(this,this.getX()+vec3d.x,this.getY()+vec3d.y,this.getZ()+vec3d.z,1.5f, World.ExplosionSourceType.TNT);
                 count =0;
                 discard();
             }

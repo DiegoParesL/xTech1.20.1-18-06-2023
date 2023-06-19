@@ -19,7 +19,7 @@ public class KunaiItem extends Item {
         ItemStack itemStack = user.getStackInHand(hand);
         KunaiEntity kunai = new KunaiEntity(world,user);
 
-        kunai.setVelocity(user,user.getPitch(), user.getYaw(),0.0F,4f,0.2f);
+        kunai.setVelocity(user,user.getPitch(), user.getYaw(),0.0F,3.5f,0.2f);
         if(!world.isClient){
             itemStack.decrement(1);
             world.spawnEntity(kunai);
