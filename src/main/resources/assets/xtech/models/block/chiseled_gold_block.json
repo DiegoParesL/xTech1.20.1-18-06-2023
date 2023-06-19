@@ -1,0 +1,7 @@
+{
+	"parent": "minecraft:block/cube_all",
+	"textures": {
+		"all": "xtech:block/chiseled_gold_block",
+		"particle": "xtech:block/chiseled_gold_block"
+	}
+}

@@ -23,7 +23,8 @@ public class ModBlocks {
                     UniformIntProvider.create(2, 6)));
     public static final Block GOLD_PILLAR = registerBlock("gold_pillar",
             new PillarBlock(FabricBlockSettings.copyOf(Blocks.GOLD_BLOCK).strength(4.0f).requiresTool()));
-
+    public static final Block CHISELED_GOLD = registerBlock("chiseled_gold_block",
+            new Block(FabricBlockSettings.copyOf(Blocks.GOLD_BLOCK).strength(4.0f).requiresTool()));
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);

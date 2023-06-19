@@ -17,7 +17,7 @@ public class XTechModDataGenerator implements DataGeneratorEntrypoint {
 
 		FabricDataGenerator.Pack pack = fabricDataGenerator.createPack();
 
-		//pack.addProvider(ModLootTableGenerator::new);
+		pack.addProvider(ModLootTableGenerator::new);
 		pack.addProvider(ModRecipeGenerator::new);
 		//pack.addProvider(ModModelProvider::new);
 		pack.addProvider(ModWorldGenerator::new);
