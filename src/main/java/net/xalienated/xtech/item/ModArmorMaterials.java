@@ -19,8 +19,17 @@ public enum ModArmorMaterials implements ArmorMaterial {
         map.put(ArmorItem.Type.LEGGINGS, 4);
         map.put(ArmorItem.Type.CHESTPLATE, 4);
         map.put(ArmorItem.Type.HELMET, 3);
-    }), 19, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 2.0F, 0.1F, () -> {
+    }),19, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 1.0F, 0.05F, () -> {
         return Ingredient.ofItems(new ItemConvertible[]{ModItems.BRONZE});
+    }),
+    STEEL("steel", 28,Util.make(new EnumMap(ArmorItem.Type.class), (map) -> {
+        map.put(ArmorItem.Type.BOOTS, 3);
+        map.put(ArmorItem.Type.LEGGINGS, 5);
+        map.put(ArmorItem.Type.CHESTPLATE, 5);
+        map.put(ArmorItem.Type.HELMET, 4);
+    }), 19, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 2.0F, 0.2F, () -> {
+        return Ingredient.ofItems(new ItemConvertible[]{ModItems.STEEL});
+
     });
 
     public static final StringIdentifiable.Codec<ArmorMaterials> CODEC = StringIdentifiable.createCodec(ArmorMaterials::values);

@@ -19,6 +19,7 @@ public class ModItemGroup {
 
                         entries.add(ModItems.BRONZE);
                         entries.add(ModItems.TIN);
+                        entries.add(ModItems.STEEL);
                         entries.add(ModItems.RAW_TIN);
                         entries.add(ModItems.BARREL);
                         entries.add(ModItems.TRIGGER);
@@ -28,11 +29,17 @@ public class ModItemGroup {
                         entries.add(ModBlocks.CHISELED_GOLD);
                         entries.add(ModBlocks.BRONZE_BLOCK);
                         entries.add(ModBlocks.TIN_BLOCK);
+                        entries.add(ModBlocks.STEEL_BLOCK);
 
                         entries.add(ModItems.BRONZE_BOOTS);
                         entries.add(ModItems.BRONZE_LEGGINGS);
                         entries.add(ModItems.BRONZE_CHESTPLATE);
                         entries.add(ModItems.BRONZE_HELMET);
+
+                        entries.add(ModItems.STEEL_BOOTS);
+                        entries.add(ModItems.STEEL_LEGGINGS);
+                        entries.add(ModItems.STEEL_CHESTPLATE);
+                        entries.add(ModItems.STEEL_HELMET);
 
                         entries.add(ModItems.SHOTGUN);
                         entries.add(ModItems.GLOCK);

@@ -1,22 +1,29 @@
 {
-  "item.xtech.bronze": "Bronze",
+  //ingots
+  "item.xtech.bronze": "Bronze Ingot",
   "item.xtech.raw_tin": "Raw Tin",
-  "item.xtech.tin": "Tin",
+  "item.xtech.tin": "Tin Ingot",
+  "item.xtech.steel": "Steel Ingot",
+  //blocks
   "block.xtech.tin_ore": "Tin ore",
   "block.xtech.bronze_block": "Bronze Block",
   "block.xtech.tin_block": "Tin Block",
+  "block.xtech.steel_block": "Steel Block",
   "block.xtech.gold_pillar": "Gold Pillar",
   "block.xtech.chiseled_gold_block": "Chiseled Gold Block",
 
+  //melee weapons
   "item.xtech.bronze_thiswhat": "Bronze ThisWhat",
   "item.xtech.bronze_sword": "Bronze Sword",
 
 
+  //armor
   "item.xtech.bronze_boots": "Bronze Boots",
   "item.xtech.bronze_chestplate": "Bronze Chestplate",
   "item.xtech.bronze_helmet": "Bronze Helmet",
   "item.xtech.bronze_leggings": "Bronze Leggings",
 
+  //distance weapons & parts
   "item.xtech.shotgun": "Shotgun",
   "item.xtech.barrel": "Barrel",
   "item.xtech.receiver": "Receiver",
@@ -32,19 +39,25 @@
 
   "item.xtech.kunai": "KunaiSS",
 
+  //ammo
   "item.xtech.bullet_sixteenmm": "Bullet 16mm",
   "item.xtech.ninemm": "Bullet 9mm",
   "item.xtech.shotgun_shell": "Shotgun Shell",
   "item.xtech.misil": "Misil",
 
+  //entities
   "entity.xtech.bullet": "Bullet",
   "entity.xtech.ninemm": "Bullet",
   "entity.xtech.shell": "Bullet",
   "entity.xtech.misil": "Misil",
 
+  //effects
   "effect.xtech.zoom": "Zoom",
 
+  //custom death message
   "death.attack.bullet_shoot": "%1$s was shot by %2$s",
   "death.attack.bullet_shoot.player": "%1$s was killed by %2$s shooting a %3$s",
+
+  //itemGroup
   "itemgroup.bronze": "xTech Tab"
 }

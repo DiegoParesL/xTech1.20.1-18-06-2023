@@ -32,6 +32,9 @@ public class ModBlocks {
     public static final Block TIN_BLOCK = registerBlock("tin_block",
             new Block(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).strength(4.0f).requiresTool()));
 
+    public static final Block STEEL_BLOCK = registerBlock("steel_block",
+            new Block(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).strength(6.0f).requiresTool()));
+
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);
         return Registry.register(Registries.BLOCK, new Identifier(XTech.MOD_ID, name), block);

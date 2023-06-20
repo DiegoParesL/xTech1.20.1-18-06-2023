@@ -15,6 +15,7 @@ public class ModLootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.CHISELED_GOLD);
         addDrop(ModBlocks.BRONZE_BLOCK);
         addDrop(ModBlocks.TIN_BLOCK);
+        addDrop(ModBlocks.STEEL_BLOCK);
 
         /*
         oreDrops(ModBlocks.TIN_ORE, ModItems.RAW_TIN);

@@ -30,19 +30,24 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
 
     @Override
     public void generate(Consumer<RecipeJsonProvider> exporter) {
-
+        //tin
         offerSmelting(exporter, List.of(ModItems.RAW_TIN), RecipeCategory.MISC, ModItems.TIN, 0.7f,200,"tin");
         offerBlasting(exporter, List.of(ModItems.RAW_TIN), RecipeCategory.MISC, ModItems.TIN, 0.7f,100,"tin");
         //offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS, ModItems.TIN, RecipeCategory.DECORATIONS, ModBlocks.TIN_BLOCK);
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.BARREL)
-                .pattern("II ")
-                .pattern("INI")
-                .pattern(" II")
-                .input('I', Items.IRON_INGOT)
-                .input('N', Items.NETHERITE_INGOT)
-                .criterion(FabricRecipeProvider.hasItem(Items.NETHERITE_INGOT),FabricRecipeProvider.conditionsFromItem(Items.IRON_INGOT))
-                .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(ModItems.BARREL)));
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.TIN_BLOCK)
+                .pattern("TTT")
+                .pattern("TTT")
+                .pattern("TTT")
+                .input('T', ModItems.TIN)
+                .criterion(FabricRecipeProvider.hasItem(ModItems.TIN),FabricRecipeProvider.conditionsFromItem(ModItems.TIN))
+                .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(ModBlocks.TIN_BLOCK)));
 
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.TIN,9)
+                .input(ModBlocks.TIN_BLOCK)
+                .criterion(FabricRecipeProvider.hasItem(ModItems.TIN),FabricRecipeProvider.conditionsFromItem(ModItems.TIN))
+                .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(ModItems.TIN)));
+
+        //bronze
         ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BRONZE_BLOCK)
                 .pattern("BBB")
                 .pattern("BBB")
@@ -51,13 +56,113 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .criterion(FabricRecipeProvider.hasItem(ModItems.BRONZE),FabricRecipeProvider.conditionsFromItem(ModItems.BRONZE))
                 .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(ModBlocks.BRONZE_BLOCK)));
 
-        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.TIN_BLOCK)
-                .pattern("TTT")
-                .pattern("TTT")
-                .pattern("TTT")
-                .input('T', ModItems.TIN)
-                .criterion(FabricRecipeProvider.hasItem(ModItems.TIN),FabricRecipeProvider.conditionsFromItem(ModItems.TIN))
-                .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(ModBlocks.TIN_BLOCK)));
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.BRONZE,9)
+                .input(ModBlocks.BRONZE_BLOCK)
+                .criterion(FabricRecipeProvider.hasItem(ModItems.BRONZE),FabricRecipeProvider.conditionsFromItem(ModItems.BRONZE))
+                .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(ModItems.BRONZE)+"from_block"));
+
+
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.BRONZE_BOOTS)
+                .pattern("   ")
+                .pattern("B B")
+                .pattern("B B")
+                .input('B', ModItems.BRONZE)
+                .criterion(FabricRecipeProvider.hasItem(ModItems.BRONZE),FabricRecipeProvider.conditionsFromItem(ModItems.BRONZE))
+                .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(ModItems.BRONZE_BOOTS)));
+
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.BRONZE_LEGGINGS)
+                .pattern("BBB")
+                .pattern("B B")
+                .pattern("B B")
+                .input('B', ModItems.BRONZE)
+                .criterion(FabricRecipeProvider.hasItem(ModItems.BRONZE),FabricRecipeProvider.conditionsFromItem(ModItems.BRONZE))
+                .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(ModItems.BRONZE_LEGGINGS)));
+
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.BRONZE_HELMET)
+                .pattern("   ")
+                .pattern("BBB")
+                .pattern("B B")
+                .input('B', ModItems.BRONZE)
+                .criterion(FabricRecipeProvider.hasItem(ModItems.BRONZE),FabricRecipeProvider.conditionsFromItem(ModItems.BRONZE))
+                .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(ModItems.BRONZE_HELMET)));
+
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.BRONZE_CHESTPLATE)
+                .pattern("B B")
+                .pattern("BBB")
+                .pattern("BBB")
+                .input('B', ModItems.BRONZE)
+                .criterion(FabricRecipeProvider.hasItem(ModItems.BRONZE),FabricRecipeProvider.conditionsFromItem(ModItems.BRONZE))
+                .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(ModItems.BRONZE_CHESTPLATE)));
+        //steel
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.STEEL_BLOCK)
+                .pattern("SSS")
+                .pattern("SSS")
+                .pattern("SSS")
+                .input('S', ModItems.STEEL)
+                .criterion(FabricRecipeProvider.hasItem(ModItems.STEEL),FabricRecipeProvider.conditionsFromItem(ModItems.STEEL))
+                .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(ModBlocks.STEEL_BLOCK)));
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.STEEL,2)
+                .input(Items.IRON_INGOT)
+                .input(Items.IRON_INGOT)
+                .input(Items.IRON_INGOT)
+                .input(Items.IRON_INGOT)
+                .input(Items.COAL)
+                .criterion(FabricRecipeProvider.hasItem(Items.COAL),FabricRecipeProvider.conditionsFromItem(Items.COAL))
+                .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(ModItems.STEEL)+"from_coal"));
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.STEEL,9)
+                .input(ModBlocks.STEEL_BLOCK)
+                .criterion(FabricRecipeProvider.hasItem(ModItems.STEEL),FabricRecipeProvider.conditionsFromItem(ModItems.STEEL))
+                .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(ModItems.STEEL)));
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.STEEL_BOOTS)
+                .pattern("   ")
+                .pattern("S S")
+                .pattern("S S")
+                .input('S', ModItems.STEEL)
+                .criterion(FabricRecipeProvider.hasItem(ModItems.STEEL),FabricRecipeProvider.conditionsFromItem(ModItems.STEEL))
+                .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(ModItems.STEEL_BOOTS)));
+
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.STEEL_LEGGINGS)
+                .pattern("SSS")
+                .pattern("S S")
+                .pattern("S S")
+                .input('S', ModItems.STEEL)
+                .criterion(FabricRecipeProvider.hasItem(ModItems.STEEL),FabricRecipeProvider.conditionsFromItem(ModItems.STEEL))
+                .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(ModItems.STEEL_LEGGINGS)));
+
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.STEEL_HELMET)
+                .pattern("   ")
+                .pattern("SSS")
+                .pattern("S S")
+                .input('S', ModItems.STEEL)
+                .criterion(FabricRecipeProvider.hasItem(ModItems.STEEL),FabricRecipeProvider.conditionsFromItem(ModItems.STEEL))
+                .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(ModItems.STEEL_HELMET)));
+
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.STEEL_CHESTPLATE)
+                .pattern("S S")
+                .pattern("SSS")
+                .pattern("SSS")
+                .input('S', ModItems.STEEL)
+                .criterion(FabricRecipeProvider.hasItem(ModItems.STEEL),FabricRecipeProvider.conditionsFromItem(ModItems.STEEL))
+                .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(ModItems.STEEL_CHESTPLATE)));
+
+        //gun parts
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.BARREL)
+                .pattern("II ")
+                .pattern("INI")
+                .pattern(" II")
+                .input('I', Items.IRON_INGOT)
+                .input('N', Items.NETHERITE_INGOT)
+                .criterion(FabricRecipeProvider.hasItem(Items.NETHERITE_INGOT),FabricRecipeProvider.conditionsFromItem(Items.IRON_INGOT))
+                .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(ModItems.BARREL)));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.TRIGGER)
                 .pattern("   ")
@@ -77,7 +182,7 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .input('P', ItemTags.PLANKS)
                 .criterion(FabricRecipeProvider.hasItem(Items.NETHERITE_INGOT),FabricRecipeProvider.conditionsFromItem(Items.IRON_INGOT))
                 .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(ModItems.RECEIVER)));
-
+        //Guns
         ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.SHOTGUN)
                 .pattern("B  ")
                 .pattern("BRP")
@@ -122,16 +227,6 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .criterion(FabricRecipeProvider.hasItem(ModItems.BARREL),FabricRecipeProvider.conditionsFromItem(Items.IRON_INGOT))
                 .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(ModItems.BAZOOKA)));
         offerStonecuttingRecipe(exporter,RecipeCategory.MISC, ModBlocks.GOLD_PILLAR,Blocks.GOLD_BLOCK);
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.MISIL,2)
-                .pattern("TTT")
-                .pattern("TGT")
-                .pattern("TTT")
-                .input('T', Items.TNT)
-                .input('G', Items.GUNPOWDER)
-                .criterion(FabricRecipeProvider.hasItem(Items.TNT),FabricRecipeProvider.conditionsFromItem(Items.TNT))
-                .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(ModItems.MISIL)));
-
         ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.TP_STAFF)
                 .pattern("EEE")
                 .pattern("EGE")
@@ -140,42 +235,15 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .input('G', Blocks.GOLD_BLOCK)
                 .criterion(FabricRecipeProvider.hasItem(Items.ENDER_PEARL),FabricRecipeProvider.conditionsFromItem(Items.ENDER_PEARL))
                 .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(ModItems.TP_STAFF)));
-
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.BRONZE_BOOTS)
-                .pattern("   ")
-                .pattern("B B")
-                .pattern("B B")
-                .input('B', ModItems.BRONZE)
-                .criterion(FabricRecipeProvider.hasItem(ModItems.BRONZE),FabricRecipeProvider.conditionsFromItem(ModItems.BRONZE))
-                .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(ModItems.BRONZE_BOOTS)));
-
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.BRONZE_LEGGINGS)
-                .pattern("BBB")
-                .pattern("B B")
-                .pattern("B B")
-                .input('B', ModItems.BRONZE)
-                .criterion(FabricRecipeProvider.hasItem(ModItems.BRONZE),FabricRecipeProvider.conditionsFromItem(ModItems.BRONZE))
-                .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(ModItems.BRONZE_LEGGINGS)));
-
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.BRONZE_HELMET)
-                .pattern("   ")
-                .pattern("BBB")
-                .pattern("B B")
-                .input('B', ModItems.BRONZE)
-                .criterion(FabricRecipeProvider.hasItem(ModItems.BRONZE),FabricRecipeProvider.conditionsFromItem(ModItems.BRONZE))
-                .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(ModItems.BRONZE_HELMET)));
-
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.BRONZE_CHESTPLATE)
-                .pattern("B B")
-                .pattern("BBB")
-                .pattern("BBB")
-                .input('B', ModItems.BRONZE)
-                .criterion(FabricRecipeProvider.hasItem(ModItems.BRONZE),FabricRecipeProvider.conditionsFromItem(ModItems.BRONZE))
-                .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(ModItems.BRONZE_CHESTPLATE)));
+        //ammo or projectiles
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.MISIL,2)
+                .pattern("TTT")
+                .pattern("TGT")
+                .pattern("TTT")
+                .input('T', Items.TNT)
+                .input('G', Items.GUNPOWDER)
+                .criterion(FabricRecipeProvider.hasItem(Items.TNT),FabricRecipeProvider.conditionsFromItem(Items.TNT))
+                .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(ModItems.MISIL)));
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.NINE_MM,2)
                 .input(Items.GUNPOWDER)
@@ -191,7 +259,6 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .input(ModItems.BRONZE)
                 .criterion(FabricRecipeProvider.hasItem(Items.GUNPOWDER),FabricRecipeProvider.conditionsFromItem(Items.GUNPOWDER))
                 .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(ModItems.RIFLE_BULLET)));
-
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.SHOTGUN_SHELL,2)
                 .input(Items.GUNPOWDER)
