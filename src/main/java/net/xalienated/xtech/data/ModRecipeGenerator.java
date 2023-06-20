@@ -43,6 +43,22 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .criterion(FabricRecipeProvider.hasItem(Items.NETHERITE_INGOT),FabricRecipeProvider.conditionsFromItem(Items.IRON_INGOT))
                 .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(ModItems.BARREL)));
 
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BRONZE_BLOCK)
+                .pattern("BBB")
+                .pattern("BBB")
+                .pattern("BBB")
+                .input('B', ModItems.BRONZE)
+                .criterion(FabricRecipeProvider.hasItem(ModItems.BRONZE),FabricRecipeProvider.conditionsFromItem(ModItems.BRONZE))
+                .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(ModBlocks.BRONZE_BLOCK)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.TIN_BLOCK)
+                .pattern("TTT")
+                .pattern("TTT")
+                .pattern("TTT")
+                .input('T', ModItems.TIN)
+                .criterion(FabricRecipeProvider.hasItem(ModItems.TIN),FabricRecipeProvider.conditionsFromItem(ModItems.TIN))
+                .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(ModBlocks.TIN_BLOCK)));
+
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.TRIGGER)
                 .pattern("   ")
                 .pattern("PPI")

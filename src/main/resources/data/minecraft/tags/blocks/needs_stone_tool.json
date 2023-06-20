@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "xtech:tin_ore"
+    "xtech:tin_ore",
+    "xtech:tin_block"
   ]
 }

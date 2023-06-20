@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "xtech:gold_pillar"
+    "xtech:gold_pillar",
+    "xtech:bronze_block"
   ]
 }

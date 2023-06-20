@@ -26,6 +26,8 @@ public class ModItemGroup {
                         entries.add(ModBlocks.TIN_ORE);
                         entries.add(ModBlocks.GOLD_PILLAR);
                         entries.add(ModBlocks.CHISELED_GOLD);
+                        entries.add(ModBlocks.BRONZE_BLOCK);
+                        entries.add(ModBlocks.TIN_BLOCK);
 
                         entries.add(ModItems.BRONZE_BOOTS);
                         entries.add(ModItems.BRONZE_LEGGINGS);

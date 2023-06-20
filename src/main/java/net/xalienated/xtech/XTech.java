@@ -26,6 +26,8 @@ import net.xalienated.xtech.world.gen.ModWorldGeneration;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.util.UUID;
+
 public class XTech implements ModInitializer {
 	public static final String MOD_ID = "xtech";
     public static final Logger LOGGER = LoggerFactory.getLogger("xtech");
@@ -81,6 +83,6 @@ public class XTech implements ModInitializer {
 		Registry.register(Registries.ITEM, new Identifier(MOD_ID,"kunai"),KUNAI_ITEM);
 		ModWorldGeneration.generateModWorldGen();
 
-		Registry.register(Registries.STATUS_EFFECT, new Identifier(MOD_ID,"zoom"), ZOOM.addAttributeModifier(EntityAttributes.GENERIC_MOVEMENT_SPEED, "7107DE5E-7CE8-4030-940E-514C1F160890", -0.75f, EntityAttributeModifier.Operation.MULTIPLY_TOTAL));
+		Registry.register(Registries.STATUS_EFFECT, new Identifier(MOD_ID,"zoom"), ZOOM.addAttributeModifier(EntityAttributes.GENERIC_MOVEMENT_SPEED,"48daff98-0f54-11ee-be56-0242ac120002", -0.15f, EntityAttributeModifier.Operation.MULTIPLY_TOTAL));
 	}
 }

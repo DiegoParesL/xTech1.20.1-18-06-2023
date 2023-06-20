@@ -1,6 +1,6 @@
-// 1.20.1	2023-06-19T21:13:11.44184	xTech/Recipes
-60f4e9bd94be28439d8775357b76b83ab0fd15f3 data\xtech\advancements\recipes\misc\kunai.json
+// 1.20.1	2023-06-20T13:45:45.8891557	xTech/Recipes
 7ebeef358f4c795742bc44c734cb3322866dae23 data\xtech\advancements\recipes\combat\bronze_boots.json
+60f4e9bd94be28439d8775357b76b83ab0fd15f3 data\xtech\advancements\recipes\misc\kunai.json
 c8c6010b6058f685e644a192560fad905eb5cfa9 data\xtech\advancements\recipes\misc\receiver.json
 b70288b08481bc1144a816c29eb8825be15a3f8a data\xtech\recipes\gold_pillar_from_gold_block_stonecutting.json
 9e3572e24b33908f4aad7f747b05e691b6c2cb4b data\xtech\advancements\recipes\misc\tin_from_blasting_raw_tin.json
@@ -8,9 +8,9 @@ b70288b08481bc1144a816c29eb8825be15a3f8a data\xtech\recipes\gold_pillar_from_gol
 0ab2ff842491e4cc2e011a4b19c9b1e08a2b7d1c data\xtech\advancements\recipes\combat\bronze_chestplate.json
 6c754360f780887ff09af209d2b6cbf57a504946 data\xtech\recipes\tin_from_blasting_raw_tin.json
 6f61c9ad672dcd0ea45bedad277dbc33ba34c779 data\xtech\recipes\rifle.json
+b40b569ba6b2f6d7c1c287be0dc1732255f764ec data\xtech\recipes\bronze_chestplate.json
 1fbcb237ebc60bde1fae4fa2962f784771839272 data\xtech\recipes\bullet_sixteenmm.json
 5f2098480f353847028e889d79beccaa666ee968 data\xtech\recipes\shotgun_shell.json
-b40b569ba6b2f6d7c1c287be0dc1732255f764ec data\xtech\recipes\bronze_chestplate.json
 1e132d2d1caf2657afde4c47795e51e53d345869 data\xtech\advancements\recipes\misc\ninemm.json
 f2f2ad699ed9dad34bb088ce8a53a9044c214508 data\xtech\recipes\receiver.json
 8b43273d6a3694a7dbd5bebd95d7016b34432b70 data\xtech\advancements\recipes\combat\glock.json
@@ -27,10 +27,13 @@ ebdce11f69bed64f46b42d61330e9b302d0e2abc data\xtech\recipes\misil.json
 1effcccd2e588df34edae46f5f1002ce27a300a7 data\xtech\advancements\recipes\misc\misil.json
 7de08273abef243dc7d83c86141923d51647b745 data\xtech\advancements\recipes\misc\trigger.json
 9e4b8fb66a56176e85af1ff639a0faf633de6503 data\xtech\recipes\shotgun.json
+02a359e4de7f3b5e93ee3de4d3bdcc8eef7f587f data\xtech\recipes\bronze_block.json
 b7bc00819346017b5077c44fcadd9f03ee4a5160 data\xtech\advancements\recipes\misc\shotgun_shell.json
+8db657357069074ea4ed68ddde3a88035500b7df data\xtech\advancements\recipes\building_blocks\bronze_block.json
 dc666cf9607ab7d9858cd3e021f7b7d3e25aa399 data\xtech\advancements\recipes\combat\bazooka.json
 31cbb7610d0c8f6cb6f82dbedbe908f80f6ccddc data\xtech\advancements\recipes\combat\tp_staff.json
 982eb4d0b631cad0e02121015a419a799a596cd7 data\xtech\recipes\bronze_helmet.json
+00a6c0abe5540928abf518baba3c6f42683c9d97 data\xtech\recipes\tin_block.json
 6430b7d58f99652603f565c14a7ecc4e8d254c68 data\xtech\advancements\recipes\combat\rifle.json
 526b15cf01332f0bd15210aab0c0b6166aea1ee2 data\xtech\recipes\glock.json
 9274b7ed34903bd002786c8ed1b3ae833eb22723 data\xtech\recipes\bazooka.json
@@ -39,3 +42,4 @@ ccc93a5c76af896ca5541eb08a4d8a7bcb0b87f9 data\xtech\advancements\recipes\misc\bu
 a7ecbe05eb5d5d1db8f5ee3c86f2f5b1a8a0ae45 data\xtech\recipes\trigger.json
 098fc60cddef67c3487c3285105ad0804a379b55 data\xtech\recipes\bronze_leggings.json
 4affedc226ad5e1c34216f39e1c72527bd1c7bb8 data\xtech\advancements\recipes\misc\tin_from_smelting_raw_tin.json
+8417dee4947ac7ff7bf7997fdae8d8a51ccf1ea3 data\xtech\advancements\recipes\building_blocks\tin_block.json

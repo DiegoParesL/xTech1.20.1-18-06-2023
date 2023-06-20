@@ -45,6 +45,9 @@ public class KunaiEntity extends ThrownItemEntity {
         }
     }
     private int count =0;
+    private double x = 0;
+    private double y = 0;
+    private double z = 0;
     @Override
     protected void onBlockHit(BlockHitResult blockHitResult) {
 
@@ -53,16 +56,18 @@ public class KunaiEntity extends ThrownItemEntity {
         Vec3d vec3d = blockHitResult.getPos().subtract(this.getX(), this.getY(), this.getZ());
         this.setVelocity(vec3d);
         this.setPos(this.getX(), this.getY(), this.getZ());
-
         if(count ==0) {
             this.playSound(SoundEvents.ENTITY_ARROW_HIT, 1.0f, 1.2f / (this.random.nextFloat() * 0.2f + 0.9f));
             count++;
+            x= vec3d.x;
+            y= vec3d.y;
+            z= vec3d.z;
         }else{
             if(count<60) {
                 count++;
 
             }else{
-                world.createExplosion(this,this.getX()+vec3d.x,this.getY()+vec3d.y,this.getZ()+vec3d.z,1.5f, World.ExplosionSourceType.TNT);
+                world.createExplosion(this,this.getX()-x/2 ,this.getY()+vec3d.y-y/2,this.getZ()-z/2,2.3f, World.ExplosionSourceType.TNT);
                 count =0;
                 discard();
             }

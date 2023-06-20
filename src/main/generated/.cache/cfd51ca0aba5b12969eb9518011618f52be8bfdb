@@ -1,2 +1,4 @@
-// 1.20.1	2023-06-19T21:13:11.4384014	xTech/Block Loot Tables
+// 1.20.1	2023-06-20T13:45:45.886163	xTech/Block Loot Tables
+6e2627a61a97ef1603f11a66907d56b487353d0b data\xtech\loot_tables\blocks\tin_block.json
 ef6475b1909df0feab95f8c394a7395666bad407 data\xtech\loot_tables\blocks\chiseled_gold_block.json
+f1f033be9c663da1f5efb341ada39e448a342947 data\xtech\loot_tables\blocks\bronze_block.json
