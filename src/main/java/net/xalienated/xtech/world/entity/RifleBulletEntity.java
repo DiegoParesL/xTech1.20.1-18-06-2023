@@ -7,7 +7,10 @@ import net.minecraft.entity.damage.DamageType;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.projectile.thrown.ThrownItemEntity;
 import net.minecraft.item.Item;
+import net.minecraft.item.Items;
 import net.minecraft.registry.RegistryKey;
+import net.minecraft.sound.SoundCategory;
+import net.minecraft.sound.SoundEvents;
 import net.minecraft.text.Text;
 import net.minecraft.util.hit.EntityHitResult;
 import net.minecraft.util.hit.HitResult;
@@ -47,18 +50,23 @@ public class RifleBulletEntity extends ThrownItemEntity {
             double y2 = entity.getY();
             double z2 = entity.getZ();
             double distancex_z = Math.abs((Math.sqrt(Math.abs((x1 * x1) + (z1 * z1))) - Math.sqrt(Math.abs((x2 * x2) + (z2 * z2)))));
-            double distancey =Math.abs(y1-y2);
-            float formula = (float) (30f - (distancex_z + distancey)/3);
+            double distancey = Math.abs(y1 - y2);
+            float formula = (float) (30f - (distancex_z + distancey) / 3);
 
-            float formula2 = (float) (30f - distancex_z/3);
-            if (formula > 1 && formula2>1) {
-                if( y1>y2) {
-                    entity.damage(world.getDamageSources().create(BULLET_SHOOT, playerEntity), formula);
-                } else{
-                    entity.damage(world.getDamageSources().create(BULLET_SHOOT, playerEntity), formula2);
-                }
+            float formula2 = (float) (30f - distancex_z / 8);
+            if (entity instanceof PlayerEntity pe && pe.getActiveItem().isOf(Items.SHIELD)) {
+                pe.playSound(SoundEvents.ITEM_SHIELD_BLOCK, SoundCategory.PLAYERS, 20F, 1F);
+                pe.getActiveItem().setDamage(+80);
             } else {
-                entity.damage(world.getDamageSources().create(BULLET_SHOOT, playerEntity), 1f); // deals damage
+                if (formula > 1 && formula2 > 1) {
+                    if (y1 > y2) {
+                        entity.damage(world.getDamageSources().create(BULLET_SHOOT, playerEntity), formula);
+                    } else {
+                        entity.damage(world.getDamageSources().create(BULLET_SHOOT, playerEntity), formula2);
+                    }
+                } else{
+                    entity.damage(world.getDamageSources().create(BULLET_SHOOT, playerEntity), 1f); // deals damage
+                }
             }
         }
     }

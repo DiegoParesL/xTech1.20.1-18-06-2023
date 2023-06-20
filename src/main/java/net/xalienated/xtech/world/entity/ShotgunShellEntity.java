@@ -7,7 +7,10 @@ import net.minecraft.entity.damage.DamageType;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.projectile.thrown.ThrownItemEntity;
 import net.minecraft.item.Item;
+import net.minecraft.item.Items;
 import net.minecraft.registry.RegistryKey;
+import net.minecraft.sound.SoundCategory;
+import net.minecraft.sound.SoundEvents;
 import net.minecraft.text.Text;
 import net.minecraft.util.hit.EntityHitResult;
 import net.minecraft.util.hit.HitResult;
@@ -51,14 +54,19 @@ public class ShotgunShellEntity extends ThrownItemEntity {
             float formula = (float) (30f - (distancex_z + distancey)/1.5);
 
             float formula2 = (float) (30f - distancex_z/1.5);
-            if (formula > 1 && formula2>1) {
-                if( y1>y2) {
-                    entity.damage(world.getDamageSources().create(BULLET_SHOOT, playerEntity), formula);
-                } else{
-                    entity.damage(world.getDamageSources().create(BULLET_SHOOT, playerEntity), formula2);
-                }
+            if (entity instanceof PlayerEntity pe && pe.getActiveItem().isOf(Items.SHIELD)) {
+                pe.playSound(SoundEvents.ITEM_SHIELD_BLOCK, SoundCategory.PLAYERS, 20F, 1F);
+                pe.getActiveItem().setDamage(+100);
             } else {
-                entity.damage(world.getDamageSources().create(BULLET_SHOOT, playerEntity), 1f); // deals damage
+                if (formula > 1 && formula2 > 1) {
+                    if (y1 > y2) {
+                        entity.damage(world.getDamageSources().create(BULLET_SHOOT, playerEntity), formula);
+                    } else {
+                        entity.damage(world.getDamageSources().create(BULLET_SHOOT, playerEntity), formula2);
+                    }
+                } else {
+                    entity.damage(world.getDamageSources().create(BULLET_SHOOT, playerEntity), 1f); // deals damage
+                }
             }
         }
     }
