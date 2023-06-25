@@ -1,0 +1,7 @@
+{
+  "asset_id": "xtech:demon",
+  "description": {
+    "translate": "trim_pattern.xtech.demon"
+  },
+  "template_item": "xtech:demon_trim"
+}

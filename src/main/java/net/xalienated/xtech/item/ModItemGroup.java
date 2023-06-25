@@ -11,6 +11,7 @@ import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import net.xalienated.xtech.XTech;
 import net.xalienated.xtech.block.ModBlocks;
+import net.xalienated.xtech.block.entity.ModBlockEntities;
 
 public class ModItemGroup {
     public static ItemGroup BRONZE = Registry.register(Registries.ITEM_GROUP, new Identifier(XTech.MOD_ID,"bronze"),
@@ -41,6 +42,8 @@ public class ModItemGroup {
                         entries.add(ModItems.STEEL_CHESTPLATE);
                         entries.add(ModItems.STEEL_HELMET);
 
+                        entries.add(ModItems.NETHERITE_ELYTRA);
+
                         entries.add(ModItems.SHOTGUN);
                         entries.add(ModItems.GLOCK);
                         entries.add(ModItems.RIFLE);
@@ -55,6 +58,10 @@ public class ModItemGroup {
 
                         entries.add(ModItems.BRONZE_SWORD);
                         entries.add(ModItems.BRONZE_THISWHAT);
+
+                        entries.add(ModItems.SPAIN_TRIM);
+                        entries.add(ModItems.DEMON_TRIM);
+                        entries.add(ModBlocks.RECYCLER);
                     }).build());
     public static void registerItemGroups() {
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries -> {

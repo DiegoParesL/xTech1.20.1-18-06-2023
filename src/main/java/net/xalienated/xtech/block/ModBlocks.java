@@ -15,6 +15,7 @@ import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
 import net.xalienated.xtech.XTech;
+import net.xalienated.xtech.block.custom.RecyclerBlock;
 import net.xalienated.xtech.item.ModItemGroup;
 
 public class ModBlocks {
@@ -34,6 +35,9 @@ public class ModBlocks {
 
     public static final Block STEEL_BLOCK = registerBlock("steel_block",
             new Block(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).strength(6.0f).requiresTool()));
+
+    public static final Block RECYCLER = Registry.register(Registries.BLOCK,new Identifier(XTech.MOD_ID,"recycler_block"),
+            new RecyclerBlock(FabricBlockSettings.of().nonOpaque().strength(6.0f)));
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);

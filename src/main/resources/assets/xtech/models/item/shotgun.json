@@ -212,33 +212,5 @@
 				}
 			]
 		}
-	],
-	"overrides": [
-		{
-			"predicate": {
-				"charging": 1
-			},
-			"model": "xtech:item/hunting_rifle_reload_0"
-		},
-		{
-			"predicate": {
-				"charging": 1,
-				"reloading": 0.40
-			},
-			"model": "xtech:item/hunting_rifle_reload_1"
-		},
-		{
-			"predicate": {
-				"charging": 1,
-				"reloading": 0.70
-			},
-			"model": "xtech:item/hunting_rifle_reload_2"
-		},
-		{
-			"predicate": {
-				"charged": 1
-			},
-			"model": "xtech:item/hunting_rifle_reload_2"
-		}
 	]
 }

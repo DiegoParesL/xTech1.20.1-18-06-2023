@@ -7,10 +7,13 @@ import net.minecraft.block.Blocks;
 import net.minecraft.data.server.recipe.RecipeJsonProvider;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
+import net.minecraft.data.server.recipe.SmithingTrimRecipeJsonBuilder;
 import net.minecraft.item.Item;
 import net.minecraft.item.Items;
+import net.minecraft.recipe.Ingredient;
 import net.minecraft.recipe.ShapedRecipe;
 import net.minecraft.recipe.ShapelessRecipe;
+import net.minecraft.recipe.SmithingTrimRecipe;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.registry.tag.ItemTags;
@@ -154,6 +157,9 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .criterion(FabricRecipeProvider.hasItem(ModItems.STEEL),FabricRecipeProvider.conditionsFromItem(ModItems.STEEL))
                 .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(ModItems.STEEL_CHESTPLATE)));
 
+        SmithingTrimRecipeJsonBuilder.create(Ingredient.ofStacks(ModItems.SPAIN_TRIM.getDefaultStack()),Ingredient.ofStacks(ModItems.STEEL_CHESTPLATE.getDefaultStack()),Ingredient.ofStacks(ModItems.STEEL.getDefaultStack()),RecipeCategory.MISC);
+        
+
         //gun parts
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.BARREL)
                 .pattern("II ")
@@ -274,5 +280,21 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .input(Items.TNT)
                 .criterion(FabricRecipeProvider.hasItem(Items.GUNPOWDER),FabricRecipeProvider.conditionsFromItem(Items.GUNPOWDER))
                 .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(XTech.KUNAI_ITEM)));
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.SPAIN_TRIM,4)
+                .pattern("RRR")
+                .pattern("GGG")
+                .pattern("RRR")
+                .input('R', Items.REDSTONE)
+                .input('G', Items.GOLD_INGOT)
+                .criterion(FabricRecipeProvider.hasItem(Items.GOLD_INGOT),FabricRecipeProvider.conditionsFromItem(Items.REDSTONE))
+                .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(ModItems.SPAIN_TRIM)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.DEMON_TRIM,4)
+                .pattern("CCC")
+                .pattern("CCC")
+                .pattern("CCC")
+                .input('C', Items.CHORUS_FRUIT)
+                .criterion(FabricRecipeProvider.hasItem(Items.CHORUS_FRUIT),FabricRecipeProvider.conditionsFromItem(Items.CHORUS_FRUIT))
+                .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(ModItems.DEMON_TRIM)));
     }
 }

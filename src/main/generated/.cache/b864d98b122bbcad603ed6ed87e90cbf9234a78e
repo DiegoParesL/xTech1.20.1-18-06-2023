@@ -1,4 +1,4 @@
-// 1.20.1	2023-06-20T18:26:43.7346846	xTech/Recipes
+// 1.20.1	2023-06-24T10:12:46.0622966	xTech/Recipes
 60f4e9bd94be28439d8775357b76b83ab0fd15f3 data\xtech\advancements\recipes\misc\kunai.json
 4e5f08966034103d79e9b27b7616c1b0209f6dc4 data\xtech\advancements\recipes\misc\bronzefrom_block.json
 42d2f4da1a528dc55b9541a62701e96933c76be8 data\xtech\recipes\steel_block.json
@@ -14,6 +14,8 @@ f2258f34b9b3c35f9bded8cbb799a7a804d4dbbc data\xtech\advancements\recipes\buildin
 4724049777f5bb81e216e661e35445c2e3d7d083 data\xtech\advancements\recipes\combat\bronze_helmet.json
 354d59bf0551b906b76b745d63590b1f7f765ef5 data\xtech\recipes\tp_staff.json
 e925b44d1b9a375e80ddec65417c642413c48b09 data\xtech\recipes\steel_leggings.json
+af07f676c7361221c669dcfc415f789a0ce09f2f data\xtech\recipes\spain_trim.json
+f09cf462e2575ecc911207e4e2db81048eefa01d data\xtech\advancements\recipes\misc\spain_trim.json
 43d2916538f9326ce80e5f56c1e94458b4546bbc data\xtech\advancements\recipes\misc\gold_pillar_from_gold_block_stonecutting.json
 094cbb5094fb12aaaa99056982ae05425dcfb954 data\xtech\recipes\ninemm.json
 23385cb05848545dea464f85efa86ead7b937f16 data\xtech\advancements\recipes\combat\bronze_leggings.json
@@ -22,6 +24,7 @@ e925b44d1b9a375e80ddec65417c642413c48b09 data\xtech\recipes\steel_leggings.json
 249c1a0e6568b8f92b1e154923b5e2c84bb18b48 data\xtech\recipes\bronzefrom_block.json
 9e4b8fb66a56176e85af1ff639a0faf633de6503 data\xtech\recipes\shotgun.json
 e87b645aed9a59a9bcc73d7af8657bdf760b4a6c data\xtech\recipes\steel_helmet.json
+b32a4fe3ef119bd1d1bd39003af648b374a933f2 data\xtech\advancements\recipes\misc\demon_trim.json
 00a6c0abe5540928abf518baba3c6f42683c9d97 data\xtech\recipes\tin_block.json
 31cbb7610d0c8f6cb6f82dbedbe908f80f6ccddc data\xtech\advancements\recipes\combat\tp_staff.json
 992c9a39c56c770b79d0925897afd274f6964969 data\xtech\recipes\steel.json
@@ -42,6 +45,7 @@ b40b569ba6b2f6d7c1c287be0dc1732255f764ec data\xtech\recipes\bronze_chestplate.js
 bc25e97c25083885e2a3b3af57f7f44b95a2153d data\xtech\advancements\recipes\misc\steel.json
 f2f2ad699ed9dad34bb088ce8a53a9044c214508 data\xtech\recipes\receiver.json
 8b43273d6a3694a7dbd5bebd95d7016b34432b70 data\xtech\advancements\recipes\combat\glock.json
+e2f418208cb105a1015ba2f9acfa82a7f797d2b2 data\xtech\recipes\demon_trim.json
 371a64eaf72b5d0447fae0230d1379ab3668bf43 data\xtech\advancements\recipes\misc\barrel.json
 026d198d7570636054b26761dc80a7418437149e data\xtech\recipes\barrel.json
 562b82e284e27050aec911e6e1c4474d59f67ff4 data\xtech\recipes\tin_from_smelting_raw_tin.json

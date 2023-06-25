@@ -1,0 +1,54 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.recycler_block.idle": {
+			"loop": true,
+			"animation_length": 1.54167,
+			"bones": {
+				"recycler": {
+					"position": {
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"0.5": {
+							"vector": [0, 0, 0]
+						}
+					}
+				},
+				"blades1": {
+					"position": {
+						"0.0": {
+							"vector": [0, 0, 0.25]
+						},
+						"0.5": {
+							"vector": [0, 0, 1]
+						},
+						"1.0": {
+							"vector": [0, 0, 0.5]
+						},
+						"1.5": {
+							"vector": [0, 0, 0.25]
+						}
+					}
+				},
+				"blades2": {
+					"position": {
+						"0.0": {
+							"vector": [0, 0, 0.25]
+						},
+						"0.5": {
+							"vector": [0, 0, -0.5]
+						},
+						"1.0": {
+							"vector": [0, 0, 0.5]
+						},
+						"1.5": {
+							"vector": [0, 0, 0.25]
+						}
+					}
+				}
+			}
+		}
+	},
+	"geckolib_format_version": 2
+}

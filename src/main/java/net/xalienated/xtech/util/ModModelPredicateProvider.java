@@ -10,8 +10,12 @@ import net.xalienated.xtech.item.ModItems;
 public class ModModelPredicateProvider {
     public static void registerModModels(){
         registerRifle(ModItems.RIFLE);
+        registerElytra(ModItems.NETHERITE_ELYTRA);
     }
     public static void registerRifle(Item rifle) {
         ModelPredicateProviderRegistrySpecificAccessor.callRegister(rifle,new Identifier("pulling"), ((stack, world, entity, seed) -> entity != null && entity.isUsingItem() && entity.getActiveItem()== stack? 1.0f:0.0f));
+    }
+    public static void registerElytra(Item elytra) {
+        ModelPredicateProviderRegistrySpecificAccessor.callRegister(elytra,new Identifier("broken"), ((stack, world, entity, seed) -> entity != null && stack.getDamage()>0? 0.0f:1.0f));
     }
 }

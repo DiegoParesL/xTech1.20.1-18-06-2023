@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "G": {
+      "item": "minecraft:gold_ingot"
+    },
+    "R": {
+      "item": "minecraft:redstone"
+    }
+  },
+  "pattern": [
+    "RRR",
+    "GGG",
+    "RRR"
+  ],
+  "result": {
+    "count": 4,
+    "item": "xtech:spain_trim"
+  },
+  "show_notification": true
+}

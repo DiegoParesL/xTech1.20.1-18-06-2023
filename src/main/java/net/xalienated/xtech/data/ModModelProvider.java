@@ -5,6 +5,7 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.minecraft.data.client.BlockStateModelGenerator;
 import net.minecraft.data.client.ItemModelGenerator;
 import net.minecraft.data.client.Models;
+import net.minecraft.util.Identifier;
 import net.xalienated.xtech.block.ModBlocks;
 import net.xalienated.xtech.item.ModItems;
 
@@ -23,7 +24,10 @@ public class ModModelProvider extends FabricModelProvider {
 
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
+
         /*
+        itemModelGenerator.uploadArmor(new Identifier(ModItems.STEEL_CHESTPLATE.toString()),new Identifier("minecraft:models/armor/steel_layer_1"),new Identifier("xtech:trims/models/armor/spain_chestplate"));
+
         itemModelGenerator.register(ModItems.TIN, Models.GENERATED);
         itemModelGenerator.register(ModItems.RAW_TIN, Models.GENERATED);
         itemModelGenerator.register(ModItems.BRONZE_BOOTS, Models.GENERATED);

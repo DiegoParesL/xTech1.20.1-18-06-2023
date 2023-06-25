@@ -2,5 +2,14 @@
   "parent": "minecraft:item/generated",
   "textures": {
     "layer0": "xtech:item/steel_chestplate"
+  },
+  "overrides": [
+
+  {
+    "model": "xtech:item/steel_chestplate_spain_trim",
+    "predicate": {
+      "trim_type": 0.15
+    }
   }
+]
 }

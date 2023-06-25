@@ -1,0 +1,7 @@
+{
+  "asset_id": "xtech:spain",
+  "description": {
+    "translate": "trim_pattern.xtech.spain"
+  },
+  "template_item": "xtech:spain_trim"
+}

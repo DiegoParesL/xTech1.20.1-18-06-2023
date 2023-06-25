@@ -1,0 +1,9 @@
+{
+  "asset_name": "demon",
+  "description": {
+    "color": "#FF55FF",
+    "translate": "trim_material.xtech.demon"
+  },
+  "ingredient": "xtech:bronze",
+  "item_model_index": 0.15
+}

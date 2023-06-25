@@ -1,0 +1,15 @@
+{
+  "parent": "xtech:item/generated",
+  "overrides": [
+
+    {
+      "model": "xtech:models/item/steel_chestplate_spain_trim",
+      "predicate": {
+        "trim_type": 0.15
+      }
+    }
+  ],
+  "textures": {
+    "layer0": "xtech:item/steel_chestplate"
+  }
+}

@@ -3,7 +3,12 @@ package net.xalienated.xtech;
 import net.fabricmc.api.ModInitializer;
 
 
+import net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityTypeBuilder;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricEntityTypeBuilder;
+import net.fabricmc.fabric.api.screenhandler.v1.ExtendedScreenHandlerType;
+import net.fabricmc.fabric.api.screenhandler.v1.ScreenHandlerRegistry;
+import net.minecraft.block.entity.BlockEntityType;
+import net.minecraft.client.gui.screen.ingame.HandledScreens;
 import net.minecraft.entity.EntityDimensions;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.SpawnGroup;
@@ -15,16 +20,23 @@ import net.minecraft.item.Item;
 import net.minecraft.registry.Registerable;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.screen.ScreenHandlerType;
 import net.minecraft.util.Identifier;
 import net.xalienated.xtech.block.ModBlocks;
+import net.xalienated.xtech.block.entity.ModBlockEntities;
+import net.xalienated.xtech.block.entity.RecyclerBlockEntity;
 import net.xalienated.xtech.item.ModItemGroup;
 import net.xalienated.xtech.item.ModItems;
+import net.xalienated.xtech.screen.ModScreenHandlers;
+import net.xalienated.xtech.screen.RecyclerScreen;
+import net.xalienated.xtech.screen.RecyclerScreenHandler;
 import net.xalienated.xtech.util.ZoomStatusEffect;
 import net.xalienated.xtech.world.entity.*;
 import net.xalienated.xtech.world.entity.damage_types.MyDamageTypes;
 import net.xalienated.xtech.world.gen.ModWorldGeneration;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import software.bernie.geckolib.GeckoLib;
 
 import java.util.UUID;
 
@@ -75,6 +87,8 @@ public class XTech implements ModInitializer {
 	public static final Item KUNAI_ITEM = new KunaiItem(new Item.Settings());
 
 	public static final StatusEffect ZOOM = new ZoomStatusEffect();
+
+
 	@Override
 	public void onInitialize() {
 		ModItemGroup.registerItemGroups();
@@ -83,6 +97,12 @@ public class XTech implements ModInitializer {
 		Registry.register(Registries.ITEM, new Identifier(MOD_ID,"kunai"),KUNAI_ITEM);
 		ModWorldGeneration.generateModWorldGen();
 
+
 		Registry.register(Registries.STATUS_EFFECT, new Identifier(MOD_ID,"zoom"), ZOOM.addAttributeModifier(EntityAttributes.GENERIC_MOVEMENT_SPEED,"48daff98-0f54-11ee-be56-0242ac120002", -0.15f, EntityAttributeModifier.Operation.MULTIPLY_TOTAL));
+		GeckoLib.initialize();
+
+
+		ModScreenHandlers.registerAllScreenHandlers();
+		ModBlockEntities.registerBlockEntities();
 	}
 }

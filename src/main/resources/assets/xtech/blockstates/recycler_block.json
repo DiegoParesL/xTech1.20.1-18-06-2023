@@ -1,0 +1,26 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "xtech:block/recycler_block"
+    },
+    "facing=east": {
+      "model": "xtech:block/recycler_block",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "xtech:block/recycler_block",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "xtech:block/recycler_block",
+      "y": 270
+
+    },
+    "facing=up": {
+      "model": "xtech:block/recycler_block"
+    },
+    "facing=down": {
+      "model": "xtech:block/recycler_block"
+    }
+  }
+}

@@ -1,11 +1,16 @@
 package net.xalienated.xtech.item;
 
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
+import net.fabricmc.fabric.mixin.recipe.ingredient.IngredientMixin;
+import net.minecraft.client.model.Model;
 import net.minecraft.item.*;
+import net.minecraft.recipe.Ingredient;
+import net.minecraft.recipe.SmithingTrimRecipe;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 import net.xalienated.xtech.XTech;
+import net.xalienated.xtech.block.ModBlocks;
 import net.xalienated.xtech.item.custom.*;
 import net.xalienated.xtech.world.entity.KunaiItem;
 
@@ -45,7 +50,11 @@ public class ModItems {
             new Item(new FabricItemSettings().maxCount(24)));
     public static final Item MISIL = registerItem("misil",
             new Item(new FabricItemSettings().maxCount(6)));
-
+    //trims
+    public static final Item SPAIN_TRIM = registerItem("spain_trim",
+            new Item(new FabricItemSettings()));
+    public static final Item DEMON_TRIM = registerItem("demon_trim",
+            new Item(new FabricItemSettings()));
     //armors starts
     public static final Item BRONZE_BOOTS = registerItem("bronze_boots",
             new BronzeArmorItem(ModArmorMaterials.BRONZE, ArmorItem.Type.BOOTS, new FabricItemSettings()));
@@ -71,6 +80,12 @@ public class ModItems {
             new SwordItem(ToolMaterials.DIAMOND,0, -1.6f,new FabricItemSettings()));
     public static final Item TP_STAFF = registerItem("tp_staff",
             new TPItem(ToolMaterials.DIAMOND,0, -2f,new FabricItemSettings()));
+
+    public static final Item NETHERITE_ELYTRA = registerItem("netherite_elytra",
+            new CustomElytraItem(new FabricItemSettings()));
+
+    public static final Item RECYCLER_BLOCK_ITEM = registerItem("recycler_block",
+            new RecyclerBlockItem(ModBlocks.RECYCLER,new FabricItemSettings()));
 
 
 
